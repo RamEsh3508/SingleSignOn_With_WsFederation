@@ -25,7 +25,7 @@ namespace SingleSignOn_With_WsFederation
 
             HttpContext.Current.GetOwinContext().Authentication.SignOut(
                 new AuthenticationProperties { RedirectUri = callbackUrl },
-                OpenIdConnectAuthenticationDefaults.AuthenticationType,
+				"Federation",
                 CookieAuthenticationDefaults.AuthenticationType);
         }
 
